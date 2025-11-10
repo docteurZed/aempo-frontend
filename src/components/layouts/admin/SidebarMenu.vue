@@ -21,7 +21,7 @@ const navigate = () => {
     :class="[
       'flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer transition-colors select-none',
       route.path === props.to
-        ? 'bg-zinc-300 text-primary-600 dark:bg-zinc-700'
+        ? 'bg-zinc-300 text-primary-500 dark:bg-zinc-700'
         : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300/50 dark:hover:bg-zinc-700/50',
     ]"
   >

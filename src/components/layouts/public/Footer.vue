@@ -92,7 +92,7 @@ import appConfig from '../../../../config/app'
 
             <div class="sm:flex sm:items-center sm:justify-between text-center">
                 <span class="text-sm sm:text-center text-zinc-400">
-                    © 2023
+                    © 2025
                     <Link as="router-link" :to="{ name: 'home' }" variant="light" class="hover:underline cursor-pointer">AEMPO</Link>.
                     Tous droits réservés.
                 </span>

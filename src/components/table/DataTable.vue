@@ -7,7 +7,7 @@ import Card from '../ui/card/Card.vue'
 const props = defineProps({
   rows: { type: Array, required: true },
   searchable: { type: Boolean, default: true },
-  perPageOptions: { type: Array, default: () => [5, 10, 25, 50] },
+  perPageOptions: { type: Array, default: () => [10, 25, 50] },
 })
 
 const search = ref('')

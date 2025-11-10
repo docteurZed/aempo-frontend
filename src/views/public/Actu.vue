@@ -8,7 +8,7 @@ import Badge from '@/components/ui/badge/Badge.vue'
 import Button from '@/components/ui/button/Button.vue'
 import Link from '@/components/ui/link/Link.vue'
 import Card from '@/components/ui/card/Card.vue'
-import { CalendarIcon, MegaphoneIcon, ArrowLongRightIcon } from '@heroicons/vue/24/solid'
+import { CalendarIcon, MegaphoneIcon, ArrowLongRightIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/vue/24/solid'
 
 const actus = [
     {
@@ -129,7 +129,8 @@ function goToPage(page) {
             <div v-if="totalPages > 1" class="flex justify-center items-center gap-2 mt-10">
                 <Button size="sm" variant="transparent" :disabled="currentPage === 1"
                     @click="goToPage(currentPage - 1)">
-                    Précédent
+                    <span class="hidden md:block">Précédent</span>
+                    <ChevronLeftIcon class="w-4 h-4 md:hidden" />
                 </Button>
 
                 <template v-for="page in totalPages" :key="page">
@@ -145,7 +146,8 @@ function goToPage(page) {
 
                 <Button size="sm" variant="transparent" :disabled="currentPage === totalPages"
                     @click="goToPage(currentPage + 1)">
-                    Suivant
+                    <span class="hidden md:block">Suivant</span>
+                    <ChevronRightIcon class="w-4 h-4 md:hidden" />
                 </Button>
             </div>
         </Section>

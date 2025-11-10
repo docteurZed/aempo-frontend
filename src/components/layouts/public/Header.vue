@@ -57,13 +57,12 @@ const sidebarRef = ref(null)
       <template #menu>
         <NavbarMenu label="Accueil" :to="{ name: 'home' }" />
         <NavbarMenu label="À propos" hasChildren>
-          <NavbarMenu label="Historique" to="/a" />
-          <NavbarMenu label="Missions et Valeurs" to="/a" />
-          <NavbarMenu label="Activités et réalisations" to="/a" />
-          <NavbarMenu label="Bureau Exécutif" to="/a" />
-          <NavbarMenu label="Comités permanents" to="/a" />
-          <NavbarMenu label="Partenaires" to="/a" />
-          <NavbarMenu label="Statuts & Règlement" to="/a" />
+          <NavbarMenu label="Présentation" :to="{ name: 'about' }" />
+          <NavbarMenu label="Historique" to="/" />
+          <NavbarMenu label="Missions et Visions" to="/" />
+          <NavbarMenu label="Bureau Exécutif" to="/" />
+          <NavbarMenu label="Comités permanents" to="/" />
+          <NavbarMenu label="Partenaires" to="/" />
         </NavbarMenu>
 
         <NavbarMenu label="Blog" :to="{ name: 'blog' }" />
@@ -79,13 +78,12 @@ const sidebarRef = ref(null)
     <Sidebar ref="sidebarRef">
       <SidebarMenu label="Accueil" :to="{ name: 'home' }" />
       <SidebarMenu label="À propos" hasChildren>
-        <SidebarMenu label="Historique" to="/b" />
-        <SidebarMenu label="Missions et Valeurs" to="/b" />
-        <SidebarMenu label="Activités et réalisations" to="/b" />
-        <SidebarMenu label="Bureau Exécutif" to="/b" />
-        <SidebarMenu label="Comités permanents" to="/b" />
-        <SidebarMenu label="Partenaires" to="/b" />
-        <SidebarMenu label="Statuts & Règlement" to="/b" />
+        <SidebarMenu label="Présentation" :to="{ name: 'about' }" />
+        <SidebarMenu label="Historique" to="/" />
+        <SidebarMenu label="Missions et Visions" to="/" />
+        <SidebarMenu label="Bureau Exécutif" to="/" />
+        <SidebarMenu label="Comités permanents" to="/" />
+        <SidebarMenu label="Partenaires" to="/" />
       </SidebarMenu>
 
       <SidebarMenu label="Blog" :to="{ name: 'blog' }" />

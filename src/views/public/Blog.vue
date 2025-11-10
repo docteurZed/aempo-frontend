@@ -1,5 +1,5 @@
 <script setup>
-import { UserIcon } from '@heroicons/vue/24/solid'
+import { ChevronRightIcon, UserIcon } from '@heroicons/vue/24/solid'
 import { ref, computed } from 'vue'
 import PublicLayout from '@/layouts/PublicLayout.vue'
 import Section from '@/components/pages/public/Section.vue'
@@ -9,6 +9,7 @@ import Button from '@/components/ui/button/Button.vue'
 import Badge from '@/components/ui/badge/Badge.vue'
 import OtherHeroSection from '@/components/pages/public/OtherHeroSection.vue'
 import SearchInput from '@/components/form/input/SearchInput.vue'
+import { ChevronLeftIcon } from '@heroicons/vue/24/outline'
 
 const breadcrumbItems = [
     { label: 'Accueil', href: '/' },
@@ -236,7 +237,8 @@ const tags = ['Recherche', 'Événement', 'Partenariat', 'Infrastructure']
                     <div class="flex justify-center items-center gap-2 mt-10 space-x-2">
                         <Button variant="transparent" size="sm" @click="goToPage(currentPage - 1)"
                             :disabled="currentPage === 1">
-                            Précédent
+                            <span class="hidden md:block">Précédent</span>
+                            <ChevronLeftIcon class="w-4 h-4 md:hidden" />
                         </Button>
 
                         <!-- <span class="text-sm text-zinc-600 dark:text-zinc-400">
@@ -253,7 +255,8 @@ const tags = ['Recherche', 'Événement', 'Partenariat', 'Infrastructure']
 
                         <Button variant="transparent" size="sm" @click="goToPage(currentPage + 1)"
                             :disabled="currentPage === totalPages">
-                            Suivant
+                            <span class="hidden md:block">Suivant</span>
+                            <ChevronRightIcon class="w-4 h-4 md:hidden" />
                         </Button>
                     </div>
                 </div>

@@ -5,6 +5,8 @@ import DataTableCellHeader from '@/components/table/DataTableCellHeader.vue'
 import DataTableCell from '@/components/table/DataTableCell.vue'
 import DataTableRow from '@/components/table/DataTableRow.vue'
 import Card from '@/components/ui/card/Card.vue'
+import Breadcrumb from '@/components/ui/breadcrumb/Breadcrumb.vue'
+import Button from '@/components/ui/button/Button.vue'
 
 const users = [
   { id: 1, name: 'Amos', email: 'amos@example.com', role: 'Admin' },
@@ -32,10 +34,18 @@ const users = [
 
 <template>
   <AdminLayout>
-    <Card class="mb-4">
+    <Breadcrumb :items="[
+            { label: 'Dashboard', href: '/dashboard' },
+            { label: 'Membres' }
+        ]" />
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-zinc-800 dark:text-zinc-200">Membres</h2>
+      <Button variant="primary">Ajouter</Button>
+    </div>
+    <!-- <Card class="mb-4">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, mollitia id. Nesciunt dolores
       autem laboriosam veniam! Explicabo laudantium odio atque!
-    </Card>
+    </Card> -->
     <DataTable :rows="users">
       <template #thead>
         <DataTableRow :is-header="true">

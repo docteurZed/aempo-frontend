@@ -1,6 +1,7 @@
 <script setup>
 import { computed, watch } from 'vue'
 import Button from '../ui/button/Button.vue'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/vue/24/solid'
 
 const props = defineProps({
   totalRows: { type: Number, required: true },
@@ -66,30 +67,29 @@ const displayedRows = computed(() => {
 <template>
   <div class="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between items-center p-3">
     <div>
-      <select
-        v-model="rowsPerPage"
-        class="font-semibold bg-zinc-200 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg px-2 py-1.5 text-sm text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
-      >
+      <select v-model="rowsPerPage"
+        class="font-semibold bg-zinc-200 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg px-2 py-1.5 text-sm text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer">
         <option v-for="opt in perPageOptions" :key="opt" :value="opt">{{ opt }}</option>
       </select>
     </div>
 
     <div class="flex items-center space-x-1">
-      <Button size="sm" @click="goPrevious" :disabled="currentPage === 1">Précédent</Button>
+      <Button size="sm" @click="goPrevious" :disabled="currentPage === 1">
+        <span class="hidden md:block">Précédent</span>
+        <ChevronLeftIcon class="w-4 h-4 md:hidden" />
+      </Button>
 
       <template v-for="item in paginationItems" :key="item">
         <span v-if="item === '...'">...</span>
-        <Button
-          v-else
-          size="sm"
-          @click="currentPage = item"
-          :variant="currentPage === item ? 'primary' : ''"
-        >
+        <Button v-else size="sm" @click="currentPage = item" :variant="currentPage === item ? 'primary' : ''">
           {{ item }}
         </Button>
       </template>
 
-      <Button size="sm" @click="goNext" :disabled="currentPage === totalPages">Suivant</Button>
+      <Button size="sm" @click="goNext" :disabled="currentPage === totalPages">
+        <span class="hidden md:block">Suivant</span>
+        <ChevronRightIcon class="w-4 h-4 md:hidden" />
+      </Button>
     </div>
 
     <div class="font-semibold text-zinc-600 dark:text-zinc-400">
