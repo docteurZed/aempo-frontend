@@ -40,6 +40,6 @@ const props = defineProps({
             </p>
         </div>
 
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-primary-700/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-primary-800/50 via-transparent to-primary-800/25"></div>
     </section>
 </template>

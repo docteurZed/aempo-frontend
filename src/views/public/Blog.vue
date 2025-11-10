@@ -72,83 +72,6 @@ const allPosts = [
         author: 'Direction Technique',
         link: '/blog/nouvelles-installations',
     },
-    {
-        id: 6,
-        title: 'Programme d’échange avec l’Université de Dakar',
-        excerpt: 'Une ouverture vers de nouvelles opportunités d’apprentissage pour les étudiants.',
-        image: '/img/image-1.jpg',
-        category: 'Partenariat',
-        categoryVariant: 'success',
-        date: '25 septembre 2025',
-        author: 'Relations Internationales',
-        link: '/blog/programme-echange-dakar',
-    },
-    {
-        id: 7,
-        title: 'Les avancées de la recherche médicale à la FSS',
-        excerpt: 'Découvrez comment nos chercheurs contribuent à l’innovation médicale au Togo.',
-        image: '/img/image-1.jpg',
-        category: 'Recherche',
-        categoryVariant: 'info',
-        date: '3 novembre 2025',
-        author: 'Dr. Kossi Améyo',
-        link: '/blog/avances-recherche-medicale',
-    },
-    {
-        id: 8,
-        title: 'Journée portes ouvertes 2025',
-        excerpt: 'Retour sur une journée d’échanges entre étudiants, enseignants et professionnels de santé.',
-        image: '/img/image-2.jpg',
-        category: 'Événement',
-        categoryVariant: 'secondary',
-        date: '28 octobre 2025',
-        author: 'Comité FSS',
-        link: '/blog/journee-portes-ouvertes-2025',
-    },
-    {
-        id: 9,
-        title: 'Nouveaux partenariats universitaires',
-        excerpt: 'La FSS s’allie à plusieurs universités africaines pour renforcer la formation médicale.',
-        image: '/img/image-3.jpg',
-        category: 'Partenariat',
-        categoryVariant: 'success',
-        date: '15 octobre 2025',
-        author: 'Direction des Relations Extérieures',
-        link: '/blog/nouveaux-partenariats',
-    },
-    {
-        id: 10,
-        title: 'Conférence annuelle sur la santé publique',
-        excerpt: 'Un événement majeur réunissant experts et étudiants pour débattre des enjeux sanitaires actuels.',
-        image: '/img/image-4.jpg',
-        category: 'Événement',
-        categoryVariant: 'secondary',
-        date: '10 octobre 2025',
-        author: 'Comité Scientifique',
-        link: '/blog/conference-sante-publique',
-    },
-    {
-        id: 11,
-        title: 'Nouvelles installations au laboratoire de biologie',
-        excerpt: 'Des équipements modernes pour renforcer la recherche et la formation pratique.',
-        image: '/img/image-5.jpg',
-        category: 'Infrastructure',
-        categoryVariant: 'warning',
-        date: '5 octobre 2025',
-        author: 'Direction Technique',
-        link: '/blog/nouvelles-installations',
-    },
-    {
-        id: 12,
-        title: 'Programme d’échange avec l’Université de Dakar',
-        excerpt: 'Une ouverture vers de nouvelles opportunités d’apprentissage pour les étudiants.',
-        image: '/img/image-1.jpg',
-        category: 'Partenariat',
-        categoryVariant: 'success',
-        date: '25 septembre 2025',
-        author: 'Relations Internationales',
-        link: '/blog/programme-echange-dakar',
-    },
 ]
 
 const searchQuery = ref('')
@@ -225,7 +148,8 @@ const tags = ['Recherche', 'Événement', 'Partenariat', 'Infrastructure']
                                 <template #footer>
                                     <div class="flex items-center justify-between">
                                         <span class="text-xs text-zinc-500 font-semibold">{{ post.date }}</span>
-                                        <Button as="router-link" :to="post.link" variant="primary" size="sm">
+                                        <Button as="router-link" :to="{ name: 'blogDetail', params: { id: post.id } }"
+                                            variant="primary" size="sm">
                                             Lire l’article
                                         </Button>
                                     </div>

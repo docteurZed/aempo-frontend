@@ -8,6 +8,11 @@ import Contact from '@/views/public/Contact.vue'
 import Actu from '@/views/public/Actu.vue'
 import Home from '@/views/public/Home.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import History from '@/views/public/History.vue'
+import Mission from '@/views/public/Mission.vue'
+import StandingCommities from '@/views/public/StandingCommities.vue'
+import Bureau from '@/views/public/Bureau.vue'
+import BlogDetail from '@/views/public/BlogDetail.vue'
 
 const routes = [
   {
@@ -21,9 +26,35 @@ const routes = [
     component: About,
   },
   {
+    path: '/historique',
+    name: 'history',
+    component: History,
+  },
+  {
+    path: '/visions-et-missions',
+    name: 'mission',
+    component: Mission,
+  },
+  {
+    path: '/comites-permanents',
+    name: 'standingCommitty',
+    component: StandingCommities,
+  },
+  {
+    path: '/bureaux-executifs',
+    name: 'bureau',
+    component: Bureau,
+  },
+  {
     path: '/blog',
     name: 'blog',
     component: Blog,
+  },
+  {
+    path: '/blog-detail/:id',
+    name: 'blogDetail',
+    component: BlogDetail,
+    props: true
   },
   {
     path: '/actualites',

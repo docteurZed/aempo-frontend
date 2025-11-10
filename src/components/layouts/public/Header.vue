@@ -58,11 +58,11 @@ const sidebarRef = ref(null)
         <NavbarMenu label="Accueil" :to="{ name: 'home' }" />
         <NavbarMenu label="À propos" hasChildren>
           <NavbarMenu label="Présentation" :to="{ name: 'about' }" />
-          <NavbarMenu label="Historique" to="/" />
-          <NavbarMenu label="Missions et Visions" to="/" />
-          <NavbarMenu label="Bureau Exécutif" to="/" />
-          <NavbarMenu label="Comités permanents" to="/" />
-          <NavbarMenu label="Partenaires" to="/" />
+          <NavbarMenu label="Historique" :to="{ name: 'history' }" />
+          <NavbarMenu label="Missions et Visions" :to="{ name: 'mission' }" />
+          <NavbarMenu label="Bureau Exécutif" :to="{ name: 'bureau' }" />
+          <NavbarMenu label="Comités permanents" :to="{ name: 'standingCommitty' }" />
+          <!-- <NavbarMenu label="Partenaires" to="/" /> -->
         </NavbarMenu>
 
         <NavbarMenu label="Blog" :to="{ name: 'blog' }" />
@@ -79,11 +79,11 @@ const sidebarRef = ref(null)
       <SidebarMenu label="Accueil" :to="{ name: 'home' }" />
       <SidebarMenu label="À propos" hasChildren>
         <SidebarMenu label="Présentation" :to="{ name: 'about' }" />
-        <SidebarMenu label="Historique" to="/" />
-        <SidebarMenu label="Missions et Visions" to="/" />
-        <SidebarMenu label="Bureau Exécutif" to="/" />
-        <SidebarMenu label="Comités permanents" to="/" />
-        <SidebarMenu label="Partenaires" to="/" />
+        <SidebarMenu label="Historique" :to="{ name: 'history' }" />
+        <SidebarMenu label="Missions et Visions" :to="{ name: 'mission' }" />
+        <SidebarMenu label="Bureau Exécutif" :to="{ name: 'bureau' }" />
+        <SidebarMenu label="Comités permanents" :to="{ name: 'standingCommitty' }" />
+        <!-- <SidebarMenu label="Partenaires" to="/" /> -->
       </SidebarMenu>
 
       <SidebarMenu label="Blog" :to="{ name: 'blog' }" />

@@ -84,10 +84,12 @@ const breadcrumbItems = [
 
 
             <form @submit.prevent="handleSubmit" class="space-y-6 max-w-3xl mx-auto mt-12">
-                <TextInput label="Nom complet" v-model="form.name" placeholder="Entrez votre nom" required />
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <TextInput label="Nom complet" v-model="form.name" placeholder="Entrez votre nom" required />
 
-                <TextInput type="email" label="Adresse email" v-model="form.email" placeholder="exemple@email.com"
-                    required />
+                    <TextInput type="email" label="Adresse email" v-model="form.email" placeholder="exemple@email.com"
+                        required />
+                </div>
 
                 <TextInput label="Sujet" v-model="form.subject" placeholder="Sujet de votre message" />
 

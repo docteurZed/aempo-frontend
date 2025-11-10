@@ -37,7 +37,7 @@ watch(
 
 <template>
   <section
-    class="relative w-full h-[90vh] flex items-center justify-center text-center overflow-hidden"
+    class="relative w-full h-[80vh] flex items-center justify-center text-center overflow-hidden"
   >
     <div
       v-for="(image, index) in images"
@@ -58,11 +58,11 @@ watch(
 
       <div class="mt-8 flex flex-col space-y-4 gap-4 sm:flex-row sm:justify-center sm:space-y-0">
         <Button as="router-link" :to="{ name: 'about' }" size="lg" variant="primary">Nous découvrir</Button>
-        <Button as="router-link" to="/" size="lg">Nous rejoindre</Button>
+        <Button as="router-link" to="/" size="lg" variant="transparent">Nous rejoindre</Button>
       </div>
     </div>
 
-    <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-primary-800/50 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-primary-800/50 via-transparent to-primary-800/25"></div>
     <!-- <div class="absolute inset-0 bg-primary-700/25 mix-blend-multiply"></div> -->
   </section>
 </template>
