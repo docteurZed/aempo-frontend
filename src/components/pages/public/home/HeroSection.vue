@@ -58,7 +58,7 @@ watch(
 
       <div class="mt-8 flex flex-col space-y-4 gap-4 sm:flex-row sm:justify-center sm:space-y-0">
         <Button as="router-link" :to="{ name: 'about' }" size="lg" variant="primary">Nous découvrir</Button>
-        <Button as="router-link" to="/" size="lg" variant="transparent">Nous rejoindre</Button>
+        <Button as="router-link" :to="{ name: 'adhesion' }" size="lg" variant="transparent">Nous rejoindre</Button>
       </div>
     </div>
 

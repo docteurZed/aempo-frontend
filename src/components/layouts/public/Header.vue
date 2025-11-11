@@ -1,6 +1,6 @@
 <script setup>
 import Navbar from './Navbar.vue'
-import { EnvelopeIcon, GlobeAltIcon, MapIcon, PhoneIcon } from '@heroicons/vue/24/solid'
+import { EnvelopeIcon, GlobeAltIcon, MapIcon, PhoneIcon, XMarkIcon } from '@heroicons/vue/24/solid'
 import Sidebar from './Sidebar.vue'
 import { ref } from 'vue'
 import appConfig from '../../../../config/app'
@@ -18,38 +18,46 @@ import Whatsapp from '@/components/ui/media-icon/Whatsapp.vue'
 
 const emit = defineEmits(['toggle-sidebar'])
 const sidebarRef = ref(null)
+const infoBar = ref(true)
 </script>
 
 <template>
   <header>
-    <div
-      class="w-full bg-primary-600 dark:bg-primary-500 text-sm font-semibold flex flex-col md:flex-row items-center justify-between py-3 px-8 md:px-16 text-zinc-200 gap-4">
-      <div class="flex gap-2 md:gap-4 items-center justify-center md:justify-start flex-wrap">
-        <span class="flex gap-1 items-center">
-          <MapIcon class="w-5 h-5" />
-          {{ appConfig.address }}
-        </span>
-        <span class="flex gap-1 items-center">
-          <EnvelopeIcon class="w-5 h-5" />
-          <a :href="`mailto:${appConfig.email}`">
-            {{ appConfig.email }}
-          </a>
-        </span>
-        <span class="flex gap-1 items-center">
-          <PhoneIcon class="w-5 h-5" />
-          {{ appConfig.phone }}
-        </span>
-      </div>
+    <div v-if="infoBar"
+      class="w-full bg-primary-600 dark:bg-primary-500 text-sm font-semibold py-3 px-8 md:px-16 text-zinc-200 flex items-center justify-between gap-2">
+      <div class="w-11/12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex gap-2 md:gap-4 items-center justify-center md:justify-start flex-wrap">
+          <span class="flex gap-1 items-center">
+            <MapIcon class="w-5 h-5" />
+            {{ appConfig.address }}
+          </span>
+          <span class="flex gap-1 items-center">
+            <EnvelopeIcon class="w-5 h-5" />
+            <a :href="`mailto:${appConfig.email}`">
+              {{ appConfig.email }}
+            </a>
+          </span>
+          <span class="flex gap-1 items-center">
+            <PhoneIcon class="w-5 h-5" />
+            {{ appConfig.phone }}
+          </span>
+        </div>
 
-      <div class="flex gap-3 items-center text-zinc-200">
-        <Facebook class="hover:text-white" variant="light" />
-        <Linkedin class="hover:text-white" variant="light" />
-        <Tiktok class="hover:text-white" variant="light" />
-        <Instagram class="hover:text-white" variant="light" />
-        <Github class="hover:text-white" variant="light" />
-        <Threads class="hover:text-white" variant="light" />
-        <Whatsapp class="hover:text-white" variant="light" />
-        <X class="hover:text-white" variant="light" />
+        <div class="flex gap-3 items-center text-zinc-200">
+          <Facebook class="hover:text-white" variant="light" />
+          <Linkedin class="hover:text-white" variant="light" />
+          <Tiktok class="hover:text-white" variant="light" />
+          <Instagram class="hover:text-white" variant="light" />
+          <Github class="hover:text-white" variant="light" />
+          <Threads class="hover:text-white" variant="light" />
+          <Whatsapp class="hover:text-white" variant="light" />
+          <X class="hover:text-white" variant="light" />
+        </div>
+      </div>
+      <div class="w-1/12 text-right">
+        <button @click="infoBar = false" class="hover:bg-primary-700 border border-zinc-500 rounded-sm p-2 cursor-pointer">
+          <XMarkIcon class="w-5 h-5" />
+        </button>
       </div>
     </div>
 

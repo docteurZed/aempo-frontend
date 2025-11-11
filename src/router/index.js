@@ -15,6 +15,7 @@ import Bureau from '@/views/public/Bureau.vue'
 import BlogDetail from '@/views/public/BlogDetail.vue'
 import Adhesion from '@/views/public/Adhesion.vue'
 import AdhesionPayement from '@/views/public/AdhesionPayement.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const routes = [
   {
@@ -56,7 +57,7 @@ const routes = [
     path: '/blog-detail/:id',
     name: 'blogDetail',
     component: BlogDetail,
-    props: true
+    props: true,
   },
   {
     path: '/actualites',
@@ -76,7 +77,7 @@ const routes = [
     component: Adhesion,
   },
   {
-    path: '/adhesion-payement',
+    path: '/adhesion-paiement',
     name: 'adhesionPayement',
     component: AdhesionPayement,
   },
@@ -103,6 +104,13 @@ const routes = [
     path: '/reset-password',
     name: 'resetPassword',
     component: ResetPassword,
+  },
+
+  // Erreurs
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound,
   },
 ]
 

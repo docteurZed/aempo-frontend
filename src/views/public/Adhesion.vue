@@ -60,7 +60,7 @@ function goToPaiement() {
         <Section>
             <SectionTitle title="Adhésion" subtitle="Rejoignez notre association pour ensemble continuez l'aventure." />
 
-            <div class="max-w-4xl mx-auto p-6">
+            <div class="max-w-4xl mx-auto">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 

@@ -18,7 +18,7 @@ const montant = 2000
     <Section>
         <SectionTitle title="Adhésion" subtitle="Rejoignez notre association pour ensemble continuez l'aventure." />
 
-        <div class="max-w-3xl mx-auto p-6">
+        <div class="max-w-3xl mx-auto">
             <div
                 class="p-4 border rounded-md bg-zinc-200 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 mb-6 text-zinc-800 dark:text-zinc-200 text-sm space-y-2">
                 <div class="grid grid-cols-3 gap-1 justify-center">
