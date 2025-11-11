@@ -13,6 +13,8 @@ import Mission from '@/views/public/Mission.vue'
 import StandingCommities from '@/views/public/StandingCommities.vue'
 import Bureau from '@/views/public/Bureau.vue'
 import BlogDetail from '@/views/public/BlogDetail.vue'
+import Adhesion from '@/views/public/Adhesion.vue'
+import AdhesionPayement from '@/views/public/AdhesionPayement.vue'
 
 const routes = [
   {
@@ -65,6 +67,18 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: Contact,
+  },
+
+  // Adhésion
+  {
+    path: '/adhesion',
+    name: 'adhesion',
+    component: Adhesion,
+  },
+  {
+    path: '/adhesion-payement',
+    name: 'adhesionPayement',
+    component: AdhesionPayement,
   },
 
   // Admin

@@ -81,7 +81,7 @@ watch(
 
     <div
       @click="toggleDropdown"
-      class="bg-zinc-200 dark:bg-zinc-800 border rounded-lg px-3 py-2 flex justify-between items-center cursor-pointer text-sm text-zinc-800 dark:text-zinc-100 border-zinc-400 dark:border-zinc-600"
+      class="bg-zinc-200 dark:bg-zinc-800 border rounded-lg px-3 py-2.5 flex justify-between items-center cursor-pointer text-sm text-zinc-800 dark:text-zinc-100 border-zinc-400 dark:border-zinc-600"
       :class="{ 'border-red-500': error }"
     >
       <span class="truncate">{{ selectedLabel || placeholder }}</span>
