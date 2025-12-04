@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+import { Toast } from '@/components';
+
+</script>
 
 <template>
-  <RouterView />
+    <RouterView />
+    <Toast />
 </template>
 
 <style scoped></style>

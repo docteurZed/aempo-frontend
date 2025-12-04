@@ -1,0 +1,7 @@
+export { default as AboutSection } from './AboutSection.vue'
+export { default as ActuSection } from './ActuSection.vue'
+export { default as BlogSection } from './BlogSection.vue'
+export { default as CtaSection } from './CtaSection.vue'
+export { default as HeroSection } from './HeroSection.vue'
+export { default as PartnerSection } from './PartnerSection.vue'
+export { default as StatSection } from './StatSection.vue'

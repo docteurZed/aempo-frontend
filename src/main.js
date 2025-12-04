@@ -2,22 +2,20 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
-
-import './assets/main.css'
-import 'flowbite'
-
-import appConfig from '../config/app.js'
-
-import { useTheme } from '@/composables/useTheme'
-
-useTheme()
+import './assets/css/main.css'
+import { useConfigStore } from '@/stores'
+import { useTheme } from '@/composables'
 
 const app = createApp(App)
 
-document.documentElement.lang = appConfig.lang
-document.title = appConfig.name
+const pinia = createPinia()
+app.use(pinia)
 
-app.use(createPinia())
 app.use(router)
+
+const configStore = useConfigStore()
+await configStore.loadConfig()
+
+useTheme()
 
 app.mount('#app')
